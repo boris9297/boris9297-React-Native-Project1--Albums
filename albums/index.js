@@ -11,7 +11,7 @@ const App = () => {
 	return (
 		<Text> WTF </Text>,
 		// <Header></Header> ok
-		<Header />
+		<Header headerText={'Albums'} />
 	);
 };
 

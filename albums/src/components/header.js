@@ -7,11 +7,12 @@ import { Text, View } from 'react-native';
 // AppRegistry.registerComponent(appName, () => App);
 
 //Component
-const Header = () => {
+// pass props from index.js
+const Header = (props) => {
 	// const { textStyle, viewStyle } = styles;
 	return (
 		<View style={styles.viewStyle}>
-			<Text style={styles.textStyle}> Albums! </Text>
+			<Text style={styles.textStyle}> {props.headerText} </Text>
 		</View>
 
 
@@ -25,7 +26,21 @@ const styles = {
 	},
 
 	viewStyle: {
-		backgroundColor: '#F8F8F8'
-	}
+		backgroundColor: '#F8F8F8',
+		// justifyContent: 'center',
+		// // alighContent: 'center',
+		// // alignItem: 'center',
+		// alignSelf: 'center',
+		height: 100,
+		paddingTop: 40,
+		paddingBottom: 10,
+		shadowColor: '#000',
+		shadowOffset: { width: 0, height: 2 },
+		shadowOpacity: 0.2, // 0 to 1
+		elevation: 2,
+		position: 'relative'
+	},
+
+
 };
 export default Header;
