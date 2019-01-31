@@ -14,8 +14,6 @@ const Header = (props) => {
 		<View style={styles.viewStyle}>
 			<Text style={styles.textStyle}> {props.headerText} </Text>
 		</View>
-
-
 	);
 };
 
