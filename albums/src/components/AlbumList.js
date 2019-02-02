@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 //用Axio取数据: 在当前directory安装 Axios  npm install --save axios
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail';
 
 //class component
 class AlbumList extends Component {
@@ -22,7 +23,9 @@ class AlbumList extends Component {
   }
 
 renderAlbums() {
-  return this.state.albums.map(albums => <Text>{albums.title}</Text>);
+  return this.state.albums.map(album =>
+     <AlbumDetail key={album.title} record={album} />
+  );
 }
 
   render() {
